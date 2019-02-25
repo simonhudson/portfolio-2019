@@ -7,8 +7,8 @@ import image from './imgs/placeholder.jpg';
 const Image = props => {
 		
 	return (
-		<div className="card__image-wrap">
-			<img alt={props.title} className="card__image" src={image} />
+		<div className="card__image">
+			<img alt={props.title} src={image} />
 		</div>
 	);
 

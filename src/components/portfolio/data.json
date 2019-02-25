@@ -3,18 +3,34 @@
 		"title": "Test Project",
 		"client": "Experian",
 		"madeWith": ["Node", "Handlebars", "Sass", "React", "Jest", "Cucumber"],
-		"url": "https://creditmatcher.experian.co.uk"
+		"url": "https://creditmatcher.experian.co.uk",
+		"github": "https://foo.co.uk",
+		"content": [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat viverra nulla. Maecenas lacinia feugiat felis id venenatis.",
+			"Vestibulum pharetra libero ut scelerisque commodo. Vestibulum quis dignissim elit. Integer at felis dictum, tempor nisl a, euismod felis. Cras et aliquam ante. Maecenas velit elit, suscipit non libero quis, pretium pretium felis.",
+			"Nunc in nulla vitae nisi ultrices ornare. Sed eu ipsum vitae risus consectetur efficitur eu id dolor."
+		]
 	},
 	{
 		"title": "Experian CreditExpert",
 		"client": "Experian",
 		"madeWith": ["Swig", "Sass", "JavaScript"],
-		"url": "https://www.experian.co.uk"
+		"url": "https://www.experian.co.uk",
+		"content": [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat viverra nulla. Maecenas lacinia feugiat felis id venenatis.",
+			"Vestibulum pharetra libero ut scelerisque commodo. Vestibulum quis dignissim elit. Integer at felis dictum, tempor nisl a, euismod felis. Cras et aliquam ante. Maecenas velit elit, suscipit non libero quis, pretium pretium felis.",
+			"Nunc in nulla vitae nisi ultrices ornare. Sed eu ipsum vitae risus consectetur efficitur eu id dolor."
+		]
 	},
 	{
 		"title": "NHS Choices",
 		"client": "Capita",
 		"madeWith": ["HTML", "CSS", "JavaScript", "jQuery", ".NET", "Sharepoint"],
-		"url": "https://www.nhs.uk"
+		"url": "https://www.nhs.uk",
+		"content": [
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat viverra nulla. Maecenas lacinia feugiat felis id venenatis.",
+			"Vestibulum pharetra libero ut scelerisque commodo. Vestibulum quis dignissim elit. Integer at felis dictum, tempor nisl a, euismod felis. Cras et aliquam ante. Maecenas velit elit, suscipit non libero quis, pretium pretium felis.",
+			"Nunc in nulla vitae nisi ultrices ornare. Sed eu ipsum vitae risus consectetur efficitur eu id dolor."
+		]
 	}
 ]

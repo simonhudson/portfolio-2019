@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import Link from './link';
 import Image from './image';
 import MadeWith from './madeWith';
 import Title from './title';
@@ -11,12 +12,24 @@ class Card extends Component {
     constructor(props) {
 		super(props);
         this.state = {};
-        this.state.isSelected = false;
+        this.state.isSelected = undefined;
 	}
     
     setSelectedState = () => {
-        const currentState = this.state.isSelected;
-        this.setState({ isSelected: !currentState });
+        const currentStateIsSelected = this.state.isSelected === true;
+        this.setState({ isSelected: !currentStateIsSelected });
+    };
+
+    setClass = state => {
+        const values = ['card'];
+        if (state.isSelected !== undefined) values.push(`card-is-selected--${state.isSelected}`);
+        return values.join(' ');
+    };
+    
+    generateCopyMarkup = props => {
+    	let paragraphs = [];
+    	props.content.map((item, index) => paragraphs.push(`<p>${item}</p>`));
+    	return paragraphs.join(' ');
     };
 
     render = () => {
@@ -24,29 +37,21 @@ class Card extends Component {
         const { props, state } = this;
         
         return (
-            <div className={`card__container card-is-selected--${state.isSelected}`} onClick={this.setSelectedState}>
-                <div className="card">
-                    <div className="card__front">
-                        <Image {...props} />
-                    </div>
-                    <div className="card__back">
-                        <Title {...props} />
-                        <div className="card__content">
-                            <MadeWith {...props} />
-                        </div>
+            <div className={this.setClass(state)} onClick={this.setSelectedState}>
+                <div className="card__overlay"></div>
+                <Image {...props} />
+                <div className="card__content">
+                    <Title {...props} />
+                    <MadeWith {...props} />
+                    <div dangerouslySetInnerHTML={{ __html: this.generateCopyMarkup(props) }}></div>
+                    <div className="card__links">
+                        <Link url={props.url} text="View project" />
+                        <Link url={props.github} text="Github" />
                     </div>
                 </div>
             </div>
         )
         
-        // return (
-        //     <div className={`card card-is-selected--${state.isSelected}`} onClick={this.setSelectedState}>
-        //         <Title {...props} />
-        //         <div className="card__content">
-        //             <MadeWith {...props} />
-        //         </div>
-        //     </div>
-        // );
     }
 }
 

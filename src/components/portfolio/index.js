@@ -8,7 +8,7 @@ const Portfolio = props => {
 
 	return (
 		<div className="portfolio__wrap">
-		{data.map((item, index) => <Card key={`card-${index}`} {...item} /> )}
+			{data.map((item, index) => <Card key={`card-${index}`} {...item} /> )}
 		</div>
 	);
 
