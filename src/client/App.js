@@ -1,6 +1,9 @@
 'use strict';
 
 import React, { Component } from 'react';
+import Portfolio from '~/components/portfolio';
+import SiteHeader from '~/components/site-header';
+import '~/client/assets/css/App.css';
 
 class App extends Component {
 
@@ -15,7 +18,7 @@ class App extends Component {
     render() {
         return (
             <>
-                <p>Hello!</p>
+                <Portfolio />
             </>
         );
     }

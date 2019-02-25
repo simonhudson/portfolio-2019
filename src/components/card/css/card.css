@@ -1,0 +1,110 @@
+.card__container {
+	perspective: 1000px;
+}
+
+.card {
+	align-items: center;
+	background: #eee;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	position: relative;
+}
+
+.card-is-selected--true .card {
+	transform: rotateY(180deg);
+}
+
+.card__container,
+.card__front,
+.card__back {
+	height: 100%;
+	width: 100%;
+}
+
+/* card speed goes here */
+.card {
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 0.6s;
+}
+
+/* hide back of pane during swap */
+.card__front,
+.card__back {
+	backface-visibility: hidden;
+	left: 0;
+	position: absolute;
+	top: 0;
+}
+
+/* front pane, placed above back */
+.card__front {
+	transform: rotateY(0deg); /* for firefox 31 */
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.card__back {
+	background: rgba(0, 0, 0, 0.75);
+	transform: rotateY(180deg);
+}
+
+/* 
+
+
+.card__content {
+	background: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	height: 100vh;
+	left: 0;
+	padding: 60px 20px 20px;
+	position: absolute;
+	top: 100vh;
+	transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+	width: 100%;
+	z-index: 2;
+}
+
+.card-is-selected--true .card__content {
+	top: 45vh;
+}
+
+.card__image-wrap {
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.card__image {
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+	width: 100%;
+}
+
+.card__title {
+	color: #fff;
+	font-family: 'EB Garamond', georgia, serif;
+	font-size: 1.4rem;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.30);
+	z-index: 3;
+}
+
+.card__made-with {
+	list-style: none;
+	text-align: center;
+}
+
+.card__made-with li {
+	color: rgba(255, 255, 255, 0.20);
+	display: inline;
+}
+
+.card__made-with li:not(:last-of-type):after {
+	content: ', ';
+} */
